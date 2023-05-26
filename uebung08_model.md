@@ -10,6 +10,136 @@
  - damit ist Controller-Logik in routing files abgebildet
  
  img s. iPhone
+
+users.js
+’’’’js
+
+var express = require('express');
+var router = expressRouter();
+
+var userController = require('../controllers/userController');
+
+/*Get users list*/
+//localhost/users
+
+router.route('/')
+  .get(usersController.getUsers)
+  .post(usersController.createUser);
+
+//localhost/users/register
+router.get('/register', function(req,res,next){
+  res.render('formular', { title: 'Register' });
+});
+
+//localhost/users/neueperson
+//save a new user object
+router.route('/neueperson)
+  .post(usersController.g);
+
+router.get('/:id', userController.readUser);
+
+module.exports = router;
+
+’’’’
+
+’’’’json
+
+[
+  {
+    "id": 0,
+    "name": "üü",
+    "vorname": "",
+    "mail": "",
+    "password": "",
+    "file": ""
+  },
+  {
+    "id": 1,
+    "name": "öö",
+    "vorname": "",
+    "mail": "",
+    "password": "",
+    "file": ""
+  },
+
+  {
+    "id": 2,
+    "name": "ähneln",
+    "vorname": "",
+    "mail": "",
+    "password": "",
+    "file": ""
+  }
+
+]
+
+’’’’
+
+usersController.js
+
+’’’’js
+
+…
+
+const getUsers = (req,res) => {
+  try {
+    if(req.files){
+      let file = req.files.file;
+      file.mv('/public/uploads'+file.name);
+      filename = '/uploads/'+file.name;
+    } catch {
+        
+  }
+
+  let user = {
+    //create ids, with and without already existing ids
+    id: users.length? users[users.length-1].id+1:0,
+    //read values from the forms fields
+    name: req.body.name,
+    vorname: req.body.vorname,
+    mail: req.body.mail,
+    password: req.body.pwd,
+    //file upload
+    file: filename
+  }
+  users.push(user);
+  let data = JSON.stringify(users,null,2);
+  fs.writeFileSync('./models/users.json',data);
+
+  console.log(user);
+  res.render('formular', { title: 'Register'});
+}
+
+const createUser = (req,res) => {
+  //
+}
+
+const readUser = (req,res) => {
+
+  // get the id of all existing users
+  let existingUsers = users.find(element => element.id == req.param.id);
+
+  //send the JSON data of all existing users
+ 
+  res.send(existingUsers);
+}
+
+const getNewestUser = (req,res) => {
+
+  // get the id of all existing users
+  let existingUsers = users.find(element => element.id == req.param.id);
+  //send the JSON data of the LAST existing users
+  res.send(existingUsers[existingUsers.length-1]);
+}
+
+module.exports = {
+  getUsers,
+  createUsers,
+  readUser
+
+’’’’
+
+
  
  ## Routes
  
@@ -84,5 +214,26 @@ folder /models in express root dir mit JS files
    - Navigation
    - Footer 
 - include statement in EJS: <%= ejsFile >
-  - array.forEach(element => <%= element %>) **anpassen**
-  
+- *unsecure* include statement in EJS: <%- ejsFile >
+ 
+- looping EJS elements: 
+’’’’ejs
+<ul>
+  <li>
+    <% array.forEach(element =>  { %>
+      <li><%= element %></li>
+    <% }); %>
+</ul>
+
+’’’’
+
+-displaying elements conditionally
+
+’’’’ejs
+<% if (typeOf(test) != 'undefined') { %>
+  <p><%= text %></p>
+<% }); %>
+
+
+
+’’’’
