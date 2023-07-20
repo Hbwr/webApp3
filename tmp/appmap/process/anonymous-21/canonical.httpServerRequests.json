@@ -1,0 +1,47 @@
+[
+  {
+    "route": "GET /api/blog",
+    "parameters": "()",
+    "status": 200
+  },
+  {
+    "route": "GET /api/blog/28",
+    "parameters": "()",
+    "status": 200
+  },
+  {
+    "route": "GET /blog",
+    "parameters": "()",
+    "status": 200
+  },
+  {
+    "route": "GET /blog/newPost",
+    "parameters": "()",
+    "status": 200
+  },
+  {
+    "route": "GET /javascripts/bootstrap.bundle.js",
+    "parameters": "()",
+    "status": 304
+  },
+  {
+    "route": "GET /javascripts/custom.js",
+    "parameters": "()",
+    "status": 304
+  },
+  {
+    "route": "GET /javascripts/navBar.js",
+    "parameters": "()",
+    "status": 304
+  },
+  {
+    "route": "GET /stylesheets/bootstrap.min.css",
+    "parameters": "()",
+    "status": 304
+  },
+  {
+    "route": "GET /stylesheets/style.css",
+    "parameters": "()",
+    "status": 304
+  }
+]

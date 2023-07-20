@@ -1,0 +1,8 @@
+name: webApp3
+packages:
+  - path: public/javascripts
+  - path: public/stylesheets
+  - path: public/controllers
+  - path: routes
+language: javascript
+appmap_dir: tmp/appmap

@@ -1,0 +1,36 @@
+{
+  "events": [],
+  "version": "1.8.0",
+  "metadata": {
+    "name": "www",
+    "app": "webApp3",
+    "labels": [],
+    "language": {
+      "name": "javascript",
+      "version": "ES.Next",
+      "engine": "node@18.16.1"
+    },
+    "frameworks": [],
+    "client": {
+      "name": "@appland/appmap-agent-js",
+      "version": "13.9.0",
+      "url": "https://github.com/getappmap/appmap-agent-js.git/#readme"
+    },
+    "recorder": {
+      "name": "process"
+    },
+    "git": {
+      "repository": "https://github.com/Hbwr/webApp3",
+      "branch": "uebung15",
+      "commit": "5e3f466b1d9d398f9ca5f1b6d6e54290bf80b9dc",
+      "status": [
+        ""
+      ],
+      "tag": null,
+      "annotated_tag": null,
+      "commits_since_tag": null,
+      "commits_since_annotated_tag": null
+    }
+  },
+  "classMap": []
+}

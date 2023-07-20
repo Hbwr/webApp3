@@ -1,0 +1,158 @@
+[
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "GET /"
+      },
+      {
+        "type": "route",
+        "name": "GET /stylesheets/bootstrap.min.css"
+      },
+      {
+        "type": "route",
+        "name": "GET /javascripts/navBar.js"
+      },
+      {
+        "type": "route",
+        "name": "GET /javascripts/bootstrap.bundle.js"
+      },
+      {
+        "type": "route",
+        "name": "GET /stylesheets/style.css"
+      },
+      {
+        "type": "route",
+        "name": "GET /javascripts/custom.js"
+      },
+      {
+        "type": "route",
+        "name": "GET /blog"
+      },
+      {
+        "type": "route",
+        "name": "GET /blog/28"
+      },
+      {
+        "type": "route",
+        "name": "GET /api/blog"
+      },
+      {
+        "type": "route",
+        "name": "GET /api/blog/28"
+      }
+    ]
+  },
+  {
+    "type": "class",
+    "name": "index",
+    "children": [
+      {
+        "type": "function",
+        "name": "[anonymous]",
+        "static": false
+      }
+    ]
+  },
+  {
+    "type": "class",
+    "name": "blog",
+    "children": [
+      {
+        "type": "function",
+        "name": "[anonymous]",
+        "static": false
+      },
+      {
+        "type": "function",
+        "name": "handleAPICalls",
+        "static": false
+      },
+      {
+        "type": "function",
+        "name": "getJoke",
+        "static": false
+      }
+    ]
+  },
+  {
+    "type": "external-service",
+    "name": "127.0.0.1:3000",
+    "children": [
+      {
+        "type": "external-route",
+        "name": "GET http://127.0.0.1:3000/api/blog"
+      },
+      {
+        "type": "external-route",
+        "name": "GET http://127.0.0.1:3000/api/blog/28"
+      }
+    ]
+  },
+  {
+    "type": "class",
+    "name": "[anonymous]",
+    "children": [
+      {
+        "type": "function",
+        "name": "[anonymous]",
+        "static": false
+      }
+    ]
+  },
+  {
+    "type": "external-service",
+    "name": "api.chucknorris.io",
+    "children": [
+      {
+        "type": "external-route",
+        "name": "GET http://api.chucknorris.io/jokes/random"
+      }
+    ]
+  },
+  {
+    "type": "class",
+    "name": "api",
+    "children": [
+      {
+        "type": "function",
+        "name": "[anonymous]",
+        "static": false
+      },
+      {
+        "type": "function",
+        "name": "analyzeReqRes",
+        "static": false
+      }
+    ]
+  },
+  {
+    "type": "class",
+    "name": "blogController",
+    "children": [
+      {
+        "type": "function",
+        "name": "getAllBlogs",
+        "static": false
+      },
+      {
+        "type": "function",
+        "name": "readBlog",
+        "static": false
+      }
+    ]
+  },
+  {
+    "type": "class",
+    "name": "readBlog",
+    "children": [
+      {
+        "type": "function",
+        "name": "[anonymous]",
+        "static": false
+      }
+    ]
+  }
+]

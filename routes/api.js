@@ -23,7 +23,7 @@ function analyzeReqRes(req, res) {
     console.log("res.locals: ", JSON.stringify(res.locals)); //An object that contains response local variables scoped to the request
 }
 
-//localhost/blog per POST
+//127.0.0.1:3000/blog per POST
 router
     .route("/blog")
     .get((req, res) => {
@@ -61,7 +61,7 @@ router
         // res.redirect("/" + blogController.amountBlogs());
     });
 
-//localhost/api/blog/:id per GET
+//127.0.0.1:3000/api/blog/:id per GET
 router
     .route("/blog/:id")
     .get((req, res) => {
