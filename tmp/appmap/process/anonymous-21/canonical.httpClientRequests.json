@@ -1,0 +1,17 @@
+[
+  {
+    "route": "GET http://127.0.0.1:3000/api/blog",
+    "parameters": "()",
+    "status": 200
+  },
+  {
+    "route": "GET http://127.0.0.1:3000/api/blog/28",
+    "parameters": "()",
+    "status": 200
+  },
+  {
+    "route": "GET http://api.chucknorris.io/jokes/random",
+    "parameters": "()",
+    "status": 200
+  }
+]

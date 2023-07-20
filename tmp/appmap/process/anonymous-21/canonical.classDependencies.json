@@ -1,0 +1,62 @@
+[
+  {
+    "caller": "GET /api/blog",
+    "callee": "api#[anonymous]"
+  },
+  {
+    "caller": "GET /api/blog/28",
+    "callee": "api#[anonymous]"
+  },
+  {
+    "caller": "GET /blog",
+    "callee": "blog#[anonymous]"
+  },
+  {
+    "caller": "GET /blog/newPost",
+    "callee": "blog#[anonymous]"
+  },
+  {
+    "caller": "[anonymous]#[anonymous]",
+    "callee": "blog#getJoke"
+  },
+  {
+    "caller": "api#[anonymous]",
+    "callee": "api#analyzeReqRes"
+  },
+  {
+    "caller": "api#[anonymous]",
+    "callee": "blogController#getAllBlogs"
+  },
+  {
+    "caller": "api#[anonymous]",
+    "callee": "blogController#readBlog"
+  },
+  {
+    "caller": "blog#[anonymous]",
+    "callee": "[anonymous]#[anonymous]"
+  },
+  {
+    "caller": "blog#[anonymous]",
+    "callee": "blog#handleAPICalls"
+  },
+  {
+    "caller": "blog#[anonymous]",
+    "callee": "blogController#amountBlogs"
+  },
+  {
+    "caller": "blog#getJoke",
+    "callee": "GET http://api.chucknorris.io/jokes/random"
+  },
+  {
+    "caller": "blog#handleAPICalls",
+    "callee": "GET http://127.0.0.1:3000/api/blog"
+  },
+  {
+    "caller": "blog#handleAPICalls",
+    "callee": "GET http://127.0.0.1:3000/api/blog/28"
+  },
+  {
+    "caller": "blogController#readBlog",
+    "callee": "readBlog#[anonymous]"
+  }
+]

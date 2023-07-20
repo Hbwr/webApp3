@@ -1,0 +1,30 @@
+[
+  {
+    "caller": "HTTP server requests",
+    "callee": "api"
+  },
+  {
+    "caller": "HTTP server requests",
+    "callee": "blog"
+  },
+  {
+    "caller": "[anonymous]",
+    "callee": "blog"
+  },
+  {
+    "caller": "api",
+    "callee": "blogController"
+  },
+  {
+    "caller": "blog",
+    "callee": "127.0.0.1:3000"
+  },
+  {
+    "caller": "blog",
+    "callee": "[anonymous]"
+  },
+  {
+    "caller": "blog",
+    "callee": "api.chucknorris.io"
+  }
+]

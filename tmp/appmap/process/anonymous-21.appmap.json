@@ -1,0 +1,3488 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 1,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/blog",
+        "normalized_path_info": null,
+        "headers": {
+          "host": "127.0.0.1:3000",
+          "connection": "keep-alive",
+          "cache-control": "max-age=0",
+          "sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "dnt": "1",
+          "upgrade-insecure-requests": "1",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+          "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "sec-fetch-site": "none",
+          "sec-fetch-mode": "navigate",
+          "sec-fetch-user": "?1",
+          "sec-fetch-dest": "document",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "en-US,en;q=0.9,de;q=0.8",
+          "if-none-match": "W/\"3a20-R9szrrT4OzyaQFGznm5vw49OgFk\""
+        }
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 2,
+      "path": "./routes/blog.js#1",
+      "lineno": 108,
+      "defined_class": "blog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "req",
+          "class": "IncomingMessage",
+          "object_id": 1,
+          "value": "[object Object]"
+        },
+        {
+          "name": "res",
+          "class": "ServerResponse",
+          "object_id": 2,
+          "value": "[object Object]"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 3,
+      "path": "./routes/blog.js#1",
+      "lineno": 64,
+      "defined_class": "blog",
+      "static": false,
+      "method_id": "handleAPICalls",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "url",
+          "class": "string",
+          "value": "\"http://127.0.0.1:3000/api/blog\""
+        },
+        {
+          "name": "method",
+          "class": "string",
+          "value": "\"get\""
+        },
+        {
+          "name": "body",
+          "class": "undefined",
+          "value": "undefined"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 4,
+      "http_client_request": {
+        "request_method": "GET",
+        "url": "http://127.0.0.1:3000/api/blog",
+        "headers": {
+          "accept": "[array]",
+          "user-agent": "[array]",
+          "accept-encoding": "[array]",
+          "connection": "[array]",
+          "host": "127.0.0.1:3000"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 5,
+      "parent_id": 4,
+      "elapsed": 0.015313000000000103,
+      "http_client_response": {
+        "status_code": 200,
+        "headers": {
+          "x-powered-by": "Express",
+          "content-type": "application/json; charset=utf-8",
+          "content-length": "4457",
+          "etag": "W/\"1169-AjFIdNc0gkmb25Qgm7hNGrY6j3M\"",
+          "date": "Thu, 20 Jul 2023 09:52:44 GMT",
+          "connection": "close"
+        },
+        "return_value": {
+          "name": "return",
+          "class": "Object",
+          "object_id": 8,
+          "value": "[object Object]",
+          "size": 2,
+          "properties": [
+            {
+              "name": "success",
+              "class": "boolean"
+            },
+            {
+              "name": "data",
+              "class": "object"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 6,
+      "parent_id": 3,
+      "elapsed": 0.019003999999999906,
+      "return_value": {
+        "name": "return",
+        "class": "Promise",
+        "object_id": 10,
+        "value": "[object Promise]"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 7,
+      "path": "./routes/blog.js#1",
+      "lineno": 110,
+      "defined_class": "[anonymous]",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "apiResponse",
+          "class": "Object",
+          "object_id": 11,
+          "value": "[object Object]",
+          "size": 2,
+          "properties": [
+            {
+              "name": "success",
+              "class": "boolean"
+            },
+            {
+              "name": "data",
+              "class": "object"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 8,
+      "path": "./routes/blog.js#1",
+      "lineno": 83,
+      "defined_class": "blog",
+      "static": false,
+      "method_id": "getJoke",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "body",
+          "class": "undefined",
+          "value": "undefined"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 9,
+      "http_client_request": {
+        "request_method": "GET",
+        "url": "http://api.chucknorris.io/jokes/random",
+        "headers": {
+          "accept": "[array]",
+          "user-agent": "[array]",
+          "accept-encoding": "[array]",
+          "connection": "[array]",
+          "host": "api.chucknorris.io"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 10,
+      "parent_id": 9,
+      "elapsed": 0.11146699999999987,
+      "http_client_response": {
+        "status_code": 200,
+        "headers": {
+          "date": "Thu, 20 Jul 2023 09:52:44 GMT",
+          "content-type": "application/json;charset=UTF-8",
+          "transfer-encoding": "chunked",
+          "connection": "close",
+          "via": "1.1 vegur",
+          "cf-cache-status": "DYNAMIC",
+          "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=HQbuNhfF2QWND%2BPZsfBKNMM2y4GwHwPwWcTyGNpE4uyIxLtV51UetmaNR85jQhubGSD2G%2FPO94FGHdnfujIwWIQcBBG3hEQsZBra%2B3t9jokhKMrZJaFxRfu5MaIGvh%2F7%2B6o864o%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+          "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+          "server": "cloudflare",
+          "cf-ray": "7e9a50244a2cb791-AMS",
+          "content-encoding": "gzip",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 11,
+      "parent_id": 8,
+      "elapsed": 0.14577499999999988,
+      "return_value": {
+        "name": "return",
+        "class": "Promise",
+        "object_id": 15,
+        "value": "[object Promise]"
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 12,
+      "parent_id": 7,
+      "elapsed": 0.19085200000000008,
+      "return_value": {
+        "name": "return",
+        "class": "undefined",
+        "value": "undefined"
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 13,
+      "parent_id": 2,
+      "elapsed": 0.004117000000000189,
+      "return_value": {
+        "name": "return",
+        "class": "undefined",
+        "value": "undefined"
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 14,
+      "parent_id": 1,
+      "elapsed": 0.21536799999999995,
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "x-powered-by": "Express",
+          "content-type": "text/html; charset=utf-8",
+          "content-length": "14870",
+          "etag": "W/\"3a16-v//A2xL/Znj+gVVQOBAqmQmE1Yc\""
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 15,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/stylesheets/bootstrap.min.css",
+        "normalized_path_info": null,
+        "headers": {
+          "host": "127.0.0.1:3000",
+          "connection": "keep-alive",
+          "sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+          "dnt": "1",
+          "sec-ch-ua-mobile": "?0",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "accept": "text/css,*/*;q=0.1",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "no-cors",
+          "sec-fetch-dest": "style",
+          "referer": "http://127.0.0.1:3000/blog",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "en-US,en;q=0.9,de;q=0.8",
+          "if-none-match": "W/\"38cf3-18972ae10b4\"",
+          "if-modified-since": "Thu, 20 Jul 2023 09:42:37 GMT"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 16,
+      "parent_id": 15,
+      "elapsed": 0.002813000000000102,
+      "http_server_response": {
+        "status_code": 304,
+        "headers": {
+          "x-powered-by": "Express",
+          "accept-ranges": "bytes",
+          "cache-control": "public, max-age=0",
+          "last-modified": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "etag": "W/\"38cf3-18972ae10b4\""
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 17,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/javascripts/navBar.js",
+        "normalized_path_info": null,
+        "headers": {
+          "host": "127.0.0.1:3000",
+          "connection": "keep-alive",
+          "sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+          "dnt": "1",
+          "if-none-match": "W/\"208-18972ae10a8\"",
+          "if-modified-since": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "sec-ch-ua-mobile": "?0",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "accept": "*/*",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "no-cors",
+          "sec-fetch-dest": "script",
+          "referer": "http://127.0.0.1:3000/blog/newPost",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "en-US,en;q=0.9,de;q=0.8"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 18,
+      "parent_id": 17,
+      "elapsed": 0.0011260000000002037,
+      "http_server_response": {
+        "status_code": 304,
+        "headers": {
+          "x-powered-by": "Express",
+          "accept-ranges": "bytes",
+          "cache-control": "public, max-age=0",
+          "last-modified": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "etag": "W/\"208-18972ae10a8\""
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 19,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/javascripts/bootstrap.bundle.js",
+        "normalized_path_info": null,
+        "headers": {
+          "host": "127.0.0.1:3000",
+          "connection": "keep-alive",
+          "sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+          "dnt": "1",
+          "if-none-match": "W/\"32bec-18972ae1094\"",
+          "if-modified-since": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "sec-ch-ua-mobile": "?0",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "accept": "*/*",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "no-cors",
+          "sec-fetch-dest": "script",
+          "referer": "http://127.0.0.1:3000/blog/newPost",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "en-US,en;q=0.9,de;q=0.8"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 20,
+      "parent_id": 19,
+      "elapsed": 0.0024520000000002257,
+      "http_server_response": {
+        "status_code": 304,
+        "headers": {
+          "x-powered-by": "Express",
+          "accept-ranges": "bytes",
+          "cache-control": "public, max-age=0",
+          "last-modified": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "etag": "W/\"32bec-18972ae1094\""
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 21,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/api/blog",
+        "normalized_path_info": null,
+        "headers": {
+          "accept": "*/*",
+          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "accept-encoding": "gzip,deflate",
+          "connection": "close",
+          "host": "127.0.0.1:3000"
+        }
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 22,
+      "path": "./routes/api.js#1",
+      "lineno": 29,
+      "defined_class": "api",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "req",
+          "class": "IncomingMessage",
+          "object_id": 4,
+          "value": "[object Object]"
+        },
+        {
+          "name": "res",
+          "class": "ServerResponse",
+          "object_id": 5,
+          "value": "[object Object]"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 23,
+      "path": "./routes/api.js#1",
+      "lineno": 17,
+      "defined_class": "api",
+      "static": false,
+      "method_id": "analyzeReqRes",
+      "receiver": {
+        "name": "this",
+        "class": "Object",
+        "object_id": 6,
+        "value": "[object global]"
+      },
+      "parameters": [
+        {
+          "name": "req",
+          "class": "IncomingMessage",
+          "object_id": 4,
+          "value": "[object Object]"
+        },
+        {
+          "name": "res",
+          "class": "ServerResponse",
+          "object_id": 5,
+          "value": "[object Object]"
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 24,
+      "parent_id": 23,
+      "elapsed": 0.001859000000000151,
+      "return_value": {
+        "name": "return",
+        "class": "undefined",
+        "value": "undefined"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 25,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 13,
+      "defined_class": "blogController",
+      "static": false,
+      "method_id": "getAllBlogs",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "req",
+          "class": "IncomingMessage",
+          "object_id": 4,
+          "value": "[object Object]"
+        },
+        {
+          "name": "res",
+          "class": "ServerResponse",
+          "object_id": 5,
+          "value": "[object Object]"
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 26,
+      "parent_id": 25,
+      "elapsed": 0.00344399999999996,
+      "return_value": {
+        "name": "return",
+        "class": "undefined",
+        "value": "undefined"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 27,
+      "path": "./routes/api.js#1",
+      "lineno": 17,
+      "defined_class": "api",
+      "static": false,
+      "method_id": "analyzeReqRes",
+      "receiver": {
+        "name": "this",
+        "class": "Object",
+        "object_id": 6,
+        "value": "[object global]"
+      },
+      "parameters": [
+        {
+          "name": "req",
+          "class": "IncomingMessage",
+          "object_id": 4,
+          "value": "[object Object]"
+        },
+        {
+          "name": "res",
+          "class": "ServerResponse",
+          "object_id": 5,
+          "value": "[object Object]"
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 28,
+      "parent_id": 27,
+      "elapsed": 0.0007200000000000273,
+      "return_value": {
+        "name": "return",
+        "class": "undefined",
+        "value": "undefined"
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 29,
+      "parent_id": 22,
+      "elapsed": 0.007018000000000029,
+      "return_value": {
+        "name": "return",
+        "class": "undefined",
+        "value": "undefined"
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 30,
+      "parent_id": 21,
+      "elapsed": 0.010429000000000088,
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "x-powered-by": "Express",
+          "content-type": "application/json; charset=utf-8",
+          "content-length": "4457",
+          "etag": "W/\"1169-AjFIdNc0gkmb25Qgm7hNGrY6j3M\""
+        },
+        "return_value": {
+          "name": "return",
+          "class": "Object",
+          "object_id": 7,
+          "value": "[object Object]",
+          "size": 2,
+          "properties": [
+            {
+              "name": "success",
+              "class": "boolean"
+            },
+            {
+              "name": "data",
+              "class": "object"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 31,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/stylesheets/style.css",
+        "normalized_path_info": null,
+        "headers": {
+          "host": "127.0.0.1:3000",
+          "connection": "keep-alive",
+          "sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+          "dnt": "1",
+          "sec-ch-ua-mobile": "?0",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "accept": "text/css,*/*;q=0.1",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "no-cors",
+          "sec-fetch-dest": "style",
+          "referer": "http://127.0.0.1:3000/blog",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "en-US,en;q=0.9,de;q=0.8",
+          "if-none-match": "W/\"b91-18972ae10b8\"",
+          "if-modified-since": "Thu, 20 Jul 2023 09:42:37 GMT"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 32,
+      "parent_id": 31,
+      "elapsed": 0.001568000000000211,
+      "http_server_response": {
+        "status_code": 304,
+        "headers": {
+          "x-powered-by": "Express",
+          "accept-ranges": "bytes",
+          "cache-control": "public, max-age=0",
+          "last-modified": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "etag": "W/\"b91-18972ae10b8\""
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 33,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/javascripts/custom.js",
+        "normalized_path_info": null,
+        "headers": {
+          "host": "127.0.0.1:3000",
+          "connection": "keep-alive",
+          "sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+          "dnt": "1",
+          "sec-ch-ua-mobile": "?0",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "accept": "*/*",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "no-cors",
+          "sec-fetch-dest": "script",
+          "referer": "http://127.0.0.1:3000/blog",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "en-US,en;q=0.9,de;q=0.8",
+          "if-none-match": "W/\"10c5-18972ae10a4\"",
+          "if-modified-since": "Thu, 20 Jul 2023 09:42:37 GMT"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 34,
+      "parent_id": 33,
+      "elapsed": 0.0017119999999999891,
+      "http_server_response": {
+        "status_code": 304,
+        "headers": {
+          "x-powered-by": "Express",
+          "accept-ranges": "bytes",
+          "cache-control": "public, max-age=0",
+          "last-modified": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "etag": "W/\"10c5-18972ae10a4\""
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 35,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/blog/newPost",
+        "normalized_path_info": null,
+        "headers": {
+          "host": "127.0.0.1:3000",
+          "connection": "keep-alive",
+          "sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "upgrade-insecure-requests": "1",
+          "dnt": "1",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+          "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "navigate",
+          "sec-fetch-user": "?1",
+          "sec-fetch-dest": "document",
+          "referer": "http://127.0.0.1:3000/blog",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "en-US,en;q=0.9,de;q=0.8"
+        }
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 36,
+      "path": "./routes/blog.js#1",
+      "lineno": 160,
+      "defined_class": "blog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "req",
+          "class": "IncomingMessage",
+          "object_id": 17,
+          "value": "[object Object]"
+        },
+        {
+          "name": "res",
+          "class": "ServerResponse",
+          "object_id": 18,
+          "value": "[object Object]"
+        },
+        {
+          "name": "next",
+          "class": "Function",
+          "object_id": 19,
+          "value": "function next (...) { ... }"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 37,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 146,
+      "defined_class": "blogController",
+      "static": false,
+      "method_id": "amountBlogs",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 38,
+      "parent_id": 37,
+      "elapsed": 0.0001459999999997308,
+      "return_value": {
+        "name": "return",
+        "class": "number",
+        "value": "28"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 39,
+      "path": "./routes/blog.js#1",
+      "lineno": 64,
+      "defined_class": "blog",
+      "static": false,
+      "method_id": "handleAPICalls",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "url",
+          "class": "string",
+          "value": "\"http://127.0.0.1:3000/api/blog/28\""
+        },
+        {
+          "name": "method",
+          "class": "string",
+          "value": "\"get\""
+        },
+        {
+          "name": "body",
+          "class": "undefined",
+          "value": "undefined"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 40,
+      "http_client_request": {
+        "request_method": "GET",
+        "url": "http://127.0.0.1:3000/api/blog/28",
+        "headers": {
+          "accept": "[array]",
+          "user-agent": "[array]",
+          "accept-encoding": "[array]",
+          "connection": "[array]",
+          "host": "127.0.0.1:3000"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 41,
+      "parent_id": 40,
+      "elapsed": 0.006521999999999934,
+      "http_client_response": {
+        "status_code": 200,
+        "headers": {
+          "x-powered-by": "Express",
+          "content-type": "application/json; charset=utf-8",
+          "content-length": "114",
+          "etag": "W/\"72-Z/1BeY6Vpzf6yO1PkMYw5K5ZoBs\"",
+          "date": "Thu, 20 Jul 2023 09:52:47 GMT",
+          "connection": "close"
+        },
+        "return_value": {
+          "name": "return",
+          "class": "Object",
+          "object_id": 53,
+          "value": "[object Object]",
+          "size": 2,
+          "properties": [
+            {
+              "name": "success",
+              "class": "boolean"
+            },
+            {
+              "name": "data",
+              "class": "object"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 42,
+      "parent_id": 39,
+      "elapsed": 0.0076109999999998765,
+      "return_value": {
+        "name": "return",
+        "class": "Promise",
+        "object_id": 55,
+        "value": "[object Promise]"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 43,
+      "path": "./routes/blog.js#1",
+      "lineno": 164,
+      "defined_class": "[anonymous]",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "response",
+          "class": "Object",
+          "object_id": 56,
+          "value": "[object Object]",
+          "size": 2,
+          "properties": [
+            {
+              "name": "success",
+              "class": "boolean"
+            },
+            {
+              "name": "data",
+              "class": "object"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 44,
+      "path": "./routes/blog.js#1",
+      "lineno": 83,
+      "defined_class": "blog",
+      "static": false,
+      "method_id": "getJoke",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "body",
+          "class": "undefined",
+          "value": "undefined"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 45,
+      "http_client_request": {
+        "request_method": "GET",
+        "url": "http://api.chucknorris.io/jokes/random",
+        "headers": {
+          "accept": "[array]",
+          "user-agent": "[array]",
+          "accept-encoding": "[array]",
+          "connection": "[array]",
+          "host": "api.chucknorris.io"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 46,
+      "parent_id": 45,
+      "elapsed": 0.10780799999999999,
+      "http_client_response": {
+        "status_code": 200,
+        "headers": {
+          "date": "Thu, 20 Jul 2023 09:52:47 GMT",
+          "content-type": "application/json;charset=UTF-8",
+          "transfer-encoding": "chunked",
+          "connection": "close",
+          "via": "1.1 vegur",
+          "cf-cache-status": "DYNAMIC",
+          "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=8DpXaWIRmRCx91CmEMVZNNqbdrWGYL90hOp2vqhJ75SVmG5RrQ9NaPmCSvF1JZeIAGfVc%2FlOZG2q%2B0avsDUHJJvAXx6q2ZzTFpdwoh5UaLXW3qgAlxGnSVm2EU%2B0pgSxzyIFbC0%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+          "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+          "server": "cloudflare",
+          "cf-ray": "7e9a5036afba1ea9-AMS",
+          "content-encoding": "gzip",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 47,
+      "parent_id": 44,
+      "elapsed": 0.10920600000000014,
+      "return_value": {
+        "name": "return",
+        "class": "Promise",
+        "object_id": 60,
+        "value": "[object Promise]"
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 48,
+      "parent_id": 43,
+      "elapsed": 0.11608100000000013,
+      "return_value": {
+        "name": "return",
+        "class": "undefined",
+        "value": "undefined"
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 49,
+      "parent_id": 36,
+      "elapsed": 0.0014290000000000873,
+      "return_value": {
+        "name": "return",
+        "class": "undefined",
+        "value": "undefined"
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 50,
+      "parent_id": 35,
+      "elapsed": 0.12627099999999974,
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "x-powered-by": "Express",
+          "content-type": "text/html; charset=utf-8",
+          "content-length": "8291",
+          "etag": "W/\"2063-0gVqruO2WMbmhYs2DjEqxLhsUj4\""
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 51,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/stylesheets/bootstrap.min.css",
+        "normalized_path_info": null,
+        "headers": {
+          "host": "127.0.0.1:3000",
+          "connection": "keep-alive",
+          "sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+          "dnt": "1",
+          "if-none-match": "W/\"38cf3-18972ae10b4\"",
+          "if-modified-since": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "sec-ch-ua-mobile": "?0",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "accept": "text/css,*/*;q=0.1",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "no-cors",
+          "sec-fetch-dest": "style",
+          "referer": "http://127.0.0.1:3000/blog/newPost",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "en-US,en;q=0.9,de;q=0.8"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 52,
+      "parent_id": 51,
+      "elapsed": 0.0017409999999999854,
+      "http_server_response": {
+        "status_code": 304,
+        "headers": {
+          "x-powered-by": "Express",
+          "accept-ranges": "bytes",
+          "cache-control": "public, max-age=0",
+          "last-modified": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "etag": "W/\"38cf3-18972ae10b4\""
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 53,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/javascripts/navBar.js",
+        "normalized_path_info": null,
+        "headers": {
+          "host": "127.0.0.1:3000",
+          "connection": "keep-alive",
+          "sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+          "dnt": "1",
+          "sec-ch-ua-mobile": "?0",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "accept": "*/*",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "no-cors",
+          "sec-fetch-dest": "script",
+          "referer": "http://127.0.0.1:3000/blog",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "en-US,en;q=0.9,de;q=0.8",
+          "if-none-match": "W/\"208-18972ae10a8\"",
+          "if-modified-since": "Thu, 20 Jul 2023 09:42:37 GMT"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 54,
+      "parent_id": 53,
+      "elapsed": 0.0013170000000000072,
+      "http_server_response": {
+        "status_code": 304,
+        "headers": {
+          "x-powered-by": "Express",
+          "accept-ranges": "bytes",
+          "cache-control": "public, max-age=0",
+          "last-modified": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "etag": "W/\"208-18972ae10a8\""
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 55,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/javascripts/bootstrap.bundle.js",
+        "normalized_path_info": null,
+        "headers": {
+          "host": "127.0.0.1:3000",
+          "connection": "keep-alive",
+          "sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+          "dnt": "1",
+          "sec-ch-ua-mobile": "?0",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "accept": "*/*",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "no-cors",
+          "sec-fetch-dest": "script",
+          "referer": "http://127.0.0.1:3000/blog",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "en-US,en;q=0.9,de;q=0.8",
+          "if-none-match": "W/\"32bec-18972ae1094\"",
+          "if-modified-since": "Thu, 20 Jul 2023 09:42:37 GMT"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 56,
+      "parent_id": 55,
+      "elapsed": 0.0016780000000003383,
+      "http_server_response": {
+        "status_code": 304,
+        "headers": {
+          "x-powered-by": "Express",
+          "accept-ranges": "bytes",
+          "cache-control": "public, max-age=0",
+          "last-modified": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "etag": "W/\"32bec-18972ae1094\""
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 57,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/stylesheets/style.css",
+        "normalized_path_info": null,
+        "headers": {
+          "host": "127.0.0.1:3000",
+          "connection": "keep-alive",
+          "sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+          "dnt": "1",
+          "if-none-match": "W/\"b91-18972ae10b8\"",
+          "if-modified-since": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "sec-ch-ua-mobile": "?0",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "accept": "text/css,*/*;q=0.1",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "no-cors",
+          "sec-fetch-dest": "style",
+          "referer": "http://127.0.0.1:3000/blog/newPost",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "en-US,en;q=0.9,de;q=0.8"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 58,
+      "parent_id": 57,
+      "elapsed": 0.0016020000000007712,
+      "http_server_response": {
+        "status_code": 304,
+        "headers": {
+          "x-powered-by": "Express",
+          "accept-ranges": "bytes",
+          "cache-control": "public, max-age=0",
+          "last-modified": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "etag": "W/\"b91-18972ae10b8\""
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 59,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/javascripts/custom.js",
+        "normalized_path_info": null,
+        "headers": {
+          "host": "127.0.0.1:3000",
+          "connection": "keep-alive",
+          "sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+          "dnt": "1",
+          "if-none-match": "W/\"10c5-18972ae10a4\"",
+          "if-modified-since": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "sec-ch-ua-mobile": "?0",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "accept": "*/*",
+          "sec-fetch-site": "same-origin",
+          "sec-fetch-mode": "no-cors",
+          "sec-fetch-dest": "script",
+          "referer": "http://127.0.0.1:3000/blog/newPost",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "en-US,en;q=0.9,de;q=0.8"
+        }
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 60,
+      "parent_id": 59,
+      "elapsed": 0.0030590000000001965,
+      "http_server_response": {
+        "status_code": 304,
+        "headers": {
+          "x-powered-by": "Express",
+          "accept-ranges": "bytes",
+          "cache-control": "public, max-age=0",
+          "last-modified": "Thu, 20 Jul 2023 09:42:37 GMT",
+          "etag": "W/\"10c5-18972ae10a4\""
+        },
+        "return_value": null
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 61,
+      "http_server_request": {
+        "protocol": "HTTP/1.1",
+        "request_method": "GET",
+        "path_info": "/api/blog/28",
+        "normalized_path_info": null,
+        "headers": {
+          "accept": "*/*",
+          "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
+          "accept-encoding": "gzip,deflate",
+          "connection": "close",
+          "host": "127.0.0.1:3000"
+        }
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 62,
+      "path": "./routes/api.js#1",
+      "lineno": 67,
+      "defined_class": "api",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "req",
+          "class": "IncomingMessage",
+          "object_id": 21,
+          "value": "[object Object]"
+        },
+        {
+          "name": "res",
+          "class": "ServerResponse",
+          "object_id": 22,
+          "value": "[object Object]"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 63,
+      "path": "./routes/api.js#1",
+      "lineno": 17,
+      "defined_class": "api",
+      "static": false,
+      "method_id": "analyzeReqRes",
+      "receiver": {
+        "name": "this",
+        "class": "Object",
+        "object_id": 6,
+        "value": "[object global]"
+      },
+      "parameters": [
+        {
+          "name": "req",
+          "class": "IncomingMessage",
+          "object_id": 21,
+          "value": "[object Object]"
+        },
+        {
+          "name": "res",
+          "class": "ServerResponse",
+          "object_id": 22,
+          "value": "[object Object]"
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 64,
+      "parent_id": 63,
+      "elapsed": 0.0011170000000001892,
+      "return_value": {
+        "name": "return",
+        "class": "undefined",
+        "value": "undefined"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 65,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 46,
+      "defined_class": "blogController",
+      "static": false,
+      "method_id": "readBlog",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "req",
+          "class": "IncomingMessage",
+          "object_id": 21,
+          "value": "[object Object]"
+        },
+        {
+          "name": "res",
+          "class": "ServerResponse",
+          "object_id": 22,
+          "value": "[object Object]"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 66,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 23,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 67,
+      "parent_id": 66,
+      "elapsed": 0.00008100000000013096,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 68,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 24,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 69,
+      "parent_id": 68,
+      "elapsed": 0.000021999999999934517,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 70,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 25,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 71,
+      "parent_id": 70,
+      "elapsed": 0.000012999999999919965,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 72,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 26,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 73,
+      "parent_id": 72,
+      "elapsed": 0.000011999999999716237,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 74,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 27,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 75,
+      "parent_id": 74,
+      "elapsed": 0.00015499999999974535,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 76,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 28,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 77,
+      "parent_id": 76,
+      "elapsed": 0.00004899999999997817,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 78,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 29,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 79,
+      "parent_id": 78,
+      "elapsed": 0.000018000000000029105,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 80,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 30,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 81,
+      "parent_id": 80,
+      "elapsed": 0.000007999999999810825,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 82,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 31,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 83,
+      "parent_id": 82,
+      "elapsed": 0.000006999999999607099,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 84,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 32,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 85,
+      "parent_id": 84,
+      "elapsed": 0.000007999999999810825,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 86,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 33,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 87,
+      "parent_id": 86,
+      "elapsed": 0.000007999999999810825,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 88,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 34,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 89,
+      "parent_id": 88,
+      "elapsed": 0.000009000000000014552,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 90,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 35,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 91,
+      "parent_id": 90,
+      "elapsed": 0.000006999999999607099,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 92,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 36,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 93,
+      "parent_id": 92,
+      "elapsed": 0.000006999999999607099,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 94,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 37,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 95,
+      "parent_id": 94,
+      "elapsed": 0.000006000000000312866,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 96,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 38,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 97,
+      "parent_id": 96,
+      "elapsed": 0.000006000000000312866,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 98,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 39,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 99,
+      "parent_id": 98,
+      "elapsed": 0.000006000000000312866,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 100,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 40,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 101,
+      "parent_id": 100,
+      "elapsed": 0.000006999999999607099,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 102,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 41,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 103,
+      "parent_id": 102,
+      "elapsed": 0.000006000000000312866,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 104,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 42,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 105,
+      "parent_id": 104,
+      "elapsed": 0.000005999999999403371,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 106,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 43,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 107,
+      "parent_id": 106,
+      "elapsed": 0.000005999999999403371,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 108,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 44,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 109,
+      "parent_id": 108,
+      "elapsed": 0.000012000000000625732,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 110,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 45,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 111,
+      "parent_id": 110,
+      "elapsed": 0.000006000000000312866,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 112,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 46,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 113,
+      "parent_id": 112,
+      "elapsed": 0.000005999999999403371,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 114,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 47,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 115,
+      "parent_id": 114,
+      "elapsed": 0.000006000000000312866,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 116,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 48,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 117,
+      "parent_id": 116,
+      "elapsed": 0.00000800000000072032,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 118,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 49,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 119,
+      "parent_id": 118,
+      "elapsed": 0.000006000000000312866,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 120,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 50,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 121,
+      "parent_id": 120,
+      "elapsed": 0.000006999999999607099,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "false"
+      }
+    },
+    {
+      "event": "call",
+      "thread_id": 0,
+      "id": 122,
+      "path": "./public/controllers/blogController.js#1",
+      "lineno": 50,
+      "defined_class": "readBlog",
+      "static": false,
+      "method_id": "[anonymous]",
+      "receiver": {
+        "name": "this",
+        "class": "undefined",
+        "value": "undefined"
+      },
+      "parameters": [
+        {
+          "name": "p",
+          "class": "Object",
+          "object_id": 51,
+          "value": "[object Object]",
+          "size": 6,
+          "properties": [
+            {
+              "name": "id",
+              "class": "number"
+            },
+            {
+              "name": "name",
+              "class": "string"
+            },
+            {
+              "name": "date",
+              "class": "string"
+            },
+            {
+              "name": "time",
+              "class": "string"
+            },
+            {
+              "name": "title",
+              "class": "string"
+            },
+            {
+              "name": "text",
+              "class": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 123,
+      "parent_id": 122,
+      "elapsed": 0.000006999999999607099,
+      "return_value": {
+        "name": "return",
+        "class": "boolean",
+        "value": "true"
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 124,
+      "parent_id": 65,
+      "elapsed": 0.0015929999999998471,
+      "return_value": {
+        "name": "return",
+        "class": "undefined",
+        "value": "undefined"
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 125,
+      "parent_id": 62,
+      "elapsed": 0.00307799999999952,
+      "return_value": {
+        "name": "return",
+        "class": "undefined",
+        "value": "undefined"
+      }
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 126,
+      "parent_id": 61,
+      "elapsed": 0.004984999999999673,
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "x-powered-by": "Express",
+          "content-type": "application/json; charset=utf-8",
+          "content-length": "114",
+          "etag": "W/\"72-Z/1BeY6Vpzf6yO1PkMYw5K5ZoBs\""
+        },
+        "return_value": {
+          "name": "return",
+          "class": "Object",
+          "object_id": 52,
+          "value": "[object Object]",
+          "size": 2,
+          "properties": [
+            {
+              "name": "success",
+              "class": "boolean"
+            },
+            {
+              "name": "data",
+              "class": "object"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "version": "1.8.0",
+  "metadata": {
+    "name": "www",
+    "app": "webApp3",
+    "labels": [],
+    "language": {
+      "name": "javascript",
+      "version": "ES.Next",
+      "engine": "node@18.16.1"
+    },
+    "frameworks": [],
+    "client": {
+      "name": "@appland/appmap-agent-js",
+      "version": "13.9.0",
+      "url": "https://github.com/getappmap/appmap-agent-js.git/#readme"
+    },
+    "recorder": {
+      "name": "process"
+    },
+    "git": {
+      "repository": "https://github.com/Hbwr/webApp3",
+      "branch": "uebung15",
+      "commit": "5e3f466b1d9d398f9ca5f1b6d6e54290bf80b9dc",
+      "status": [
+        ""
+      ],
+      "tag": null,
+      "annotated_tag": null,
+      "commits_since_tag": null,
+      "commits_since_annotated_tag": null
+    }
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /blog"
+        },
+        {
+          "type": "route",
+          "name": "GET /stylesheets/bootstrap.min.css"
+        },
+        {
+          "type": "route",
+          "name": "GET /javascripts/navBar.js"
+        },
+        {
+          "type": "route",
+          "name": "GET /javascripts/bootstrap.bundle.js"
+        },
+        {
+          "type": "route",
+          "name": "GET /api/blog"
+        },
+        {
+          "type": "route",
+          "name": "GET /stylesheets/style.css"
+        },
+        {
+          "type": "route",
+          "name": "GET /javascripts/custom.js"
+        },
+        {
+          "type": "route",
+          "name": "GET /blog/newPost"
+        },
+        {
+          "type": "route",
+          "name": "GET /api/blog/28"
+        }
+      ]
+    },
+    {
+      "type": "class",
+      "name": "blog",
+      "children": [
+        {
+          "type": "function",
+          "name": "[anonymous]",
+          "static": false
+        },
+        {
+          "type": "function",
+          "name": "handleAPICalls",
+          "static": false
+        },
+        {
+          "type": "function",
+          "name": "getJoke",
+          "static": false
+        }
+      ]
+    },
+    {
+      "type": "external-service",
+      "name": "127.0.0.1:3000",
+      "children": [
+        {
+          "type": "external-route",
+          "name": "GET http://127.0.0.1:3000/api/blog"
+        },
+        {
+          "type": "external-route",
+          "name": "GET http://127.0.0.1:3000/api/blog/28"
+        }
+      ]
+    },
+    {
+      "type": "class",
+      "name": "[anonymous]",
+      "children": [
+        {
+          "type": "function",
+          "name": "[anonymous]",
+          "static": false
+        }
+      ]
+    },
+    {
+      "type": "external-service",
+      "name": "api.chucknorris.io",
+      "children": [
+        {
+          "type": "external-route",
+          "name": "GET http://api.chucknorris.io/jokes/random"
+        }
+      ]
+    },
+    {
+      "type": "class",
+      "name": "api",
+      "children": [
+        {
+          "type": "function",
+          "name": "[anonymous]",
+          "static": false
+        },
+        {
+          "type": "function",
+          "name": "analyzeReqRes",
+          "static": false
+        }
+      ]
+    },
+    {
+      "type": "class",
+      "name": "blogController",
+      "children": [
+        {
+          "type": "function",
+          "name": "getAllBlogs",
+          "static": false
+        },
+        {
+          "type": "function",
+          "name": "amountBlogs",
+          "static": false
+        },
+        {
+          "type": "function",
+          "name": "readBlog",
+          "static": false
+        }
+      ]
+    },
+    {
+      "type": "class",
+      "name": "readBlog",
+      "children": [
+        {
+          "type": "function",
+          "name": "[anonymous]",
+          "static": false
+        }
+      ]
+    }
+  ]
+}
