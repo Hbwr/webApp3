@@ -1,5 +1,5 @@
 {
-  "name": "webapp3",
+  "name": "uebung15",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,20 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "ejs": "~2.6.1",
+    "ejs": "^2.6.2",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "moment": "^2.29.4",
     "morgan": "~1.9.1",
-    "nodemon": "^3.0.1"
-  }
+    "node-fetch": "2.0",
+    "util": "^0.12.5"
+  },
+  "devDependencies": {
+    "@appland/appmap-agent-js": "^13.9.0",
+    "nodemon": "^2.0.22"
+  },
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "description": "Try AppMap locally again"
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('./_header.ejs') %>
+
+<body style="padding:1vh">
+
+    <h1><%= title %></h1>
+
+    <% blogData.forEach(p => { %>
+
+        
+        <% console.log(blogData.length) %>
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card" style="width: 95vh; margin: 2vh">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= p.title %></h5>
+                        <p class="card-text"><%= new Date(p.date).toLocaleDateString()%> <%= p.time %></p>
+                <a href="/blog/<%= p.id %>" class="btn btn-primary">Details</a>
+            </div>
+            </div>
+        </div>
+<%    }) %>
+    
+</body>
+
+</html>

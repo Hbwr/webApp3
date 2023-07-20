@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./_header.ejs') %>
+
+<body>
+    <div class="container mt-4">
+        <a href="/.." class="btn">Return Home</a>
+        <h2><%= title %></h2>
+        <form action="/neuePerson" method="POST" id="multipleRoutesForm">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Vorname" aria-label="Vorname">
+                <span class="input-group-text"> </span>
+                <input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname" aria-label="Name">
+            </div>
+          <div class="mb-3">
+            <label for="bday" class="form-label">Geburtsdatum:</label>
+            <input type="date" class="form-control" id="bday" name="bday" required>
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">Adresse:</label>
+            <input type="number" class="form-control" id="plz" name="address" placeholder="PLZ"  style="margin-top:10px;margin-bottom:10px">
+            <input type="text" class="form-control" id="city" name="address" placeholder="Stadt"  style="margin-top:10px;margin-bottom:10px">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Mail-Name" aria-label="UserName">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" placeholder="Mail-Ende" aria-label="Mail-Ende" value="informatik.hs-fulda.de" onfocus="if(this.value=='informatik.hs-fulda.de')this.value=''" onblur="if(this.value=='')this.value='informatik.hs-fulda.de'">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <input type="submit" name="personSubmit" value="Vanilla Submit">
+        </form>
+    </div>
+
+    <div class="container mt-4">
+        <a href="/.." class="btn">Return Home</a>
+        <h2><%= title %></h2>
+        <form action="/neuePerson" method="POST">
+            <div class="input-group mb-3">
+                <textarea class="form-control" id="text" name="text" rows="5" >Hello World!</textarea>
+            </div>
+          <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+          <input type="submit" name="vanilla submit" value="personSubmit">
+        </form>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Blog Post Submitted Successfully!</h2>
+        
+    </div>
+
+</body>
+
+<script>
+    /* custom script to add time and date automatically */
+    function setDateTime() {
+        var currentDateTime = new Date();
+        var date = currentDateTime.toISOString().split('T')[0];
+        var hours = currentDateTime.getHours();
+        var minutes = currentDateTime.getMinutes();
+        var time = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0');
+
+
+        document.getElementById('bday').value = date;
+        document.getElementById('time').value = time;
+    }
+
+    /**
+     *  send to multiple routes:
+     *  - using the AJAX package
+     *  - route1: /neuePerson route
+     *  - route2: /altersberechnung route
+     *  - both are POST routes and return a req.body
+     */
+    /* document.getElementById('multipleRoutesForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get the form data
+        const formData = new FormData(event.target);
+
+        // Send the form data to the first route using AJAX
+        fetch('/neuePerson', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+            console.log('Form submitted to route1:', response);
+            // Handle the response or perform any necessary actions
+            })
+            .catch(error => {
+            console.error('Error submitting form to route1:', error);
+            // Handle the error
+            });
+
+        // Send the form data to the second route using AJAX
+        fetch('/altersberechnung', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.text())
+            .then(data => {
+            console.log('Form submitted to route2:', data);
+            // Handle the response or perform any necessary actions
+            })
+            .catch(error => {
+            console.error('Error submitting form to route2:', error);
+            // Handle the error
+            });
+    }); */
+
+
+    /**
+     * Console log in HTML js files is working in the Browser/Client-side
+     */
+    console.log("printing client-side");
+    console.log("console.log(document.getElementsByTagName('body')): ",document.getElementsByTagName('body'));
+</script>
+
+</html>

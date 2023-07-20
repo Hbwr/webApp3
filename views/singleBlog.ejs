@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('./_header.ejs') %>
+
+<body>
+
+    <div class="container mt-4">
+        <div class="card border-light mb-3">
+            <div class="card-header text-bg-primary mb-3">
+                <h5 class="card-title"><%= requestedBlog.title %></h5>
+                <p class="card-subtitle text-bg-primary mb-3">Published on <span class="fw-bold"><%= new Date(requestedBlog.date).toLocaleDateString() %></span> at <span class="fw-bold"><%= requestedBlog.time %></span> by <span
+                    class="fw-bold"><%= requestedBlog.name %></span>
+                </p>
+            </div>
+            <div class="card-body ">
+    
+                <p>
+                    <%= requestedBlog.text %>
+                </p>
+            </div>
+        </div>
+        <a href="/blog" class="btn btn-primary" >Zurück zu allen Blogs</a>
+    </div>
+
+    
+</body>
+
+
+</html>

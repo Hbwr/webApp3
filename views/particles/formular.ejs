@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div class="container mt-4">
+        <h2><%= title %></h2>
+        <form action="<%= formSubmit.action %>" method="<%= formSubmit.method %>">
+        <% formInputs.forEach(input => { %> 
+            <div class= <%= formStyle.class %> >
+                <label for= <%= input.name %>  class= <%= formStyle.form %> > <%= input.label %></label>
+                <input type= <%= input.inputType %> class=<%= formStyle.input %> id= <%= input.id %> name=<%= input.name %> required=<%= input.required %> <% if (editMode) { %>value=<%= requestedBlog[input.name] %><% } %>>
+            </div>
+            <% if (input.id == "time") { %>
+                <button type="button" class="btn btn-primary" onclick="setDateTime()">Set Current Date & Time</button>
+            <% } %>   
+       <% }); %>
+
+       
+
+          
+        <% formTextFields.forEach(t => { %>
+            <div class=<%= formStyle.class %>>
+                <label for=<%= t.name %> class=<%= formStyle.label %>><%= t.label %></label>
+                <textarea class=<%= formStyle.input %> id=<%= t.id %> name=<%= t.name %> rows=<%= t.rows %> required=<%= t.required %>><% if (editMode) { %><%= requestedBlog[t.name] %><% } %></textarea>
+
+            </div>
+        
+        <% }) %>
+            
+        <% if (editMode) { %>
+            <a href="#" id="delete" class="btn btn-secondary" style="margin-top: 1vh" >Delete</a>
+            <a href="#" id="put" class="btn btn-secondary" style="margin-top: 1vh">Change</a>
+        <% } else { %>
+          <button type="submit" class="btn btn-primary" style="margin-top: 1vh" >Submit</button>
+        <% } %>
+
+        </form>
+    </div>
+
+    <div class="container mt-4" <% if (showSuccess) { %>style="display:block"<% } else { %>style="display:none"<% } %>>
+        <h2>Blog Post Submitted Successfully!</h2>
+        <p><%= JSON.stringify(requestedBlog) %></p>      
+    </div>
+
+    <div class="container mt-4" >
+        <label>Inspiration: <%= joke %></label>
+
+    </div>
+
+</body>
+
+</html>

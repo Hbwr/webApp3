@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Altersberechnung</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS styles */
+    body {
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .received-value {
+      color: #ff6b6b;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Altersberechnung</h1>
+    <div class="mb-3">
+      <label for="receivedValue" class="form-label">Received Value:</label>
+      <p class="received-value" id="receivedValue"><%= value %></p>
+    </div>
+    <div class="text-center">
+      <a href="/" class="btn btn-primary">Go Back</a>
+    </div>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

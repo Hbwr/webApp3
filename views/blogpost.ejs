@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./_header.ejs') %>
+
+<body>
+
+    <p id='blogId' style="display:none"><%= requestedBlog.id %></p>
+    
+    <div id="viewPost" <% if (!submitMode) { %>style="display:block"<% } else { %>style="display:none"<% } %> ><%- include('./particles/viewPost.ejs') %></div>
+
+    <!-- <p>Bitch</p> -->
+
+    <div id="formular" <% if (submitMode ) { %>style="display:block"<% } else { %>style="display:none"<% } %>>
+        <%- include('./particles/formular.ejs') %>
+    </div>
+    
+    
+    <!-- <h3>in JSON:</h3>
+    <p id="test"><%= JSON.stringify(requestedBlog.text) %></p> -->
+
+
+</body>
+
+<script>
+
+    ///included EJS files can be accessed
+
+    // check if a value is loaded
+/*     document.addEventListener("DOMContentLoaded", function() {
+        var blogId = document.getElementById("blogId").textContent;
+        console.log(blogId);
+        // Use the blogId value in your script
+    }); */
+
+    // edit a blog post
+    document.getElementById("edit").addEventListener('click', e => {
+        e.preventDefault();
+        event.stopPropagation();
+        document.getElementById("formular").style.display = "block";
+        document.getElementById("viewPost").style.display = "none";
+    });
+
+    // delete a blog post
+    document.getElementById("delete").addEventListener("click", e => {
+        e.preventDefault();
+
+        //open a window with dialog to accept or decline deletion
+        var r = confirm("Are you sure you want to delete this blog post?");
+        if (r == false) {
+            return;
+        }
+
+        var elementValue = document.getElementById('blogId').textContent; // !!! not "value" but "textContent"
+        console.log("Deleting blog No. "+elementValue);
+
+        fetch('/api/blog/'+elementValue, {
+            method: 'DELETE'
+        }).then(res => res.json())
+        .then(re => {
+            if(re.success){
+                // display a popup window that the blog post was deleted
+                alert(`Blog post No. ${elementValue} deleted successfully`);
+                //redirect to page with all blogs
+                window.location.href = '/blog';
+            } else {
+                res.status(404);
+            }
+        })
+        
+    });
+
+    // change a blog post
+    document.getElementById("put").addEventListener("click", e => {
+        e.preventDefault();
+
+        var elementValue = document.getElementById('blogId').textContent;
+        console.log("Changing blog No. "+elementValue);
+
+        // get all input fields
+        var inputs = document.getElementsByTagName('input');
+        var textareas = document.getElementsByTagName('textarea');
+        var allInputs = [...inputs, ...textareas];
+        console.log(allInputs);
+
+        // create a JSON object with all input fields
+        var blog = {};
+        allInputs.forEach(input => {
+            blog[input.name] = input.value;
+        });
+        console.log(blog);
+
+        // send the JSON object to the server
+        fetch('/api/blog/'+elementValue, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(blog)
+        }).then(res => res.json())
+        .then(re => {
+            if(re.success){
+                // display a popup window that the blog post was changed
+                alert(`Blog post No. ${elementValue} changed successfully`);
+                //redirect to page with all blogs
+                window.location.href = '/blog';
+            } else {
+                res.status(404);
+            }
+        })
+    });
+    
+    //custom script to add time and date automatically
+    function setDateTime() {
+        console.log("help");
+        var currentDateTime = new Date();
+        console.log(currentDateTime);
+        var date = currentDateTime.toISOString().split('T')[0];
+        console.log(date);
+        var hours = currentDateTime.getHours();
+        var minutes = currentDateTime.getMinutes();
+        var time = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0');
+
+
+        document.getElementById('date').value = date;
+        document.getElementById('time').value = time;
+    }
+</script>
+
+</html>

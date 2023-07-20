@@ -6,6 +6,9 @@ var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var blogRouter = require("./routes/blog");
+var apiRouter = require("./routes/api");
+var apiRouter2 = require("./routes/api2");
 
 var app = express();
 
@@ -15,12 +18,16 @@ app.set("view engine", "ejs");
 
 app.use(logger("dev"));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+//added public to root search
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/blog", blogRouter);
+app.use("/api", apiRouter);
+app.use("/api2", apiRouter2);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -36,17 +43,6 @@ app.use(function (err, req, res, next) {
     // render the error page
     res.status(err.status || 500);
     res.render("error");
-});
-
-// logging middleware
-var num = 0;
-app.use(function (req, res, next) {
-    var ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress;
-    var method = req.method;
-    var url = req.url;
-
-    console.log(++num + ". IP " + ip + " " + method + " " + url);
-    next();
 });
 
 module.exports = app;

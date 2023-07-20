@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+  <%- include('./_header.ejs') %>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
-    <a href="/hello">open message</a>
+    <div class="container">
+      <a href="/person" class="btn animated-button">Formular über Person</a>
+      <a href="/blog/newPost" class="btn pulse-button">Create Blog Posts</a>
+      <a href="/api2" class="btn api-button">Check out APIs</a>
+    </div>
   </body>
 </html>
