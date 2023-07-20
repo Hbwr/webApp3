@@ -128,7 +128,7 @@ const startNewBlog = (req, res, next) => {
 
     console.log(formInputs[0].label);
 
-    console.log("localhost/blog/newPost per GET");
+    console.log("127.0.0.1:3000/blog/newPost per GET");
     res.render("blogpost", {
         title: "Create A Blog Post",
         userData: JSON.stringify(

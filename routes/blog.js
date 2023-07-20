@@ -94,19 +94,19 @@ let getJoke = async (body) => {
     return joke;
 };
 
-//localhost/blog per POST
+//127.0.0.1:3000/blog per POST
 router
     .route("/")
     //muss async sein für gewisse Fälle bei fetch: line[2], nicht für line[3]
     /* .get((req, res, body) => {
         //per handleAPICalls Daten beschaffen
         //line[2]
-        //let apiResponse = handleAPICalls("http://localhost/api/blog", "get"); //braucht async in der Funktion
+        //let apiResponse = handleAPICalls("http://127.0.0.1:3000/api/blog", "get"); //braucht async in der Funktion
         // console.log(apiResponse);
         
     });*/
     .get((req, res) => {
-        handleAPICalls("http://localhost/api/blog", "get")
+        handleAPICalls("http://127.0.0.1:3000/api/blog", "get")
             .then(async (apiResponse) => {
                 //Chuck Norris API kann in einem anderen Fetch abgerufen wird (zuerst der erste API-Call, dann der nächste)
                 let joke = await getJoke().catch((err) => console.log(err));
@@ -132,7 +132,7 @@ router
 
         blogController.createBlog(req, res);
         let apiResponse = handleAPICalls(
-            "http://localhost/api/blog/" + blogController.amountBlogs(),
+            "http://127.0.0.1:3000/api/blog/" + blogController.amountBlogs(),
             "get"
         ).then(async (response) => {
             console.log(response.data);
@@ -156,10 +156,10 @@ router
         });
     });
 
-//localhost/blog/newPost per GET
+//127.0.0.1:3000/blog/newPost per GET
 router.get("/newPost", (req, res, next) => {
     let apiResponse = handleAPICalls(
-        "http://localhost/api/blog/" + blogController.amountBlogs(),
+        "http://127.0.0.1:3000/api/blog/" + blogController.amountBlogs(),
         "get"
     ).then(async (response) => {
         // console.log(response.data);
@@ -183,12 +183,12 @@ router.get("/newPost", (req, res, next) => {
     });
 });
 
-//localhost/blog/:id per GET
+//127.0.0.1:3000/blog/:id per GET
 router.get("/:id", (req, res, next) => {
     console.log("12.2");
     console.log(req.params.id);
     let apiResponse = handleAPICalls(
-        "http://localhost/api/blog/" + req.params.id,
+        "http://127.0.0.1:3000/api/blog/" + req.params.id,
         "get"
     ).then(async (response) => {
         // console.log(response.data);
@@ -216,7 +216,7 @@ router.get("/:id", (req, res, next) => {
  * Local Controller
  */
 
-//localhost/blog per POST
+//127.0.0.1:3000/blog per POST
 /* router
     .route("/")
     .get((req, res) => {
@@ -228,13 +228,13 @@ router.get("/:id", (req, res, next) => {
         res.redirect("/blog/newPost");
     });
 
-//localhost/blog/newPost per GET
+//127.0.0.1:3000/blog/newPost per GET
 router.get("/newPost", (req, res, next) => {
     console.log("opened newPost");
     blogController.startNewBlog(req, res, next);
 });
 
-//localhost/blog/:id per GET
+//127.0.0.1:3000/blog/:id per GET
 router.get("/:id", function (req, res) {
     blogController.readBlog(req, res);
 }); */
